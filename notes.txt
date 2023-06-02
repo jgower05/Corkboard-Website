@@ -1,0 +1,12 @@
+Corkboard-Website
+
+Allows a user to add and connect notes together like a corkboard. They can then save, load and export
+them.
+
+User can double-click on background to create a new note. They'll then have the option to add text to the notes
+
+Users can drag and move notes to different areas on corkboard
+
+Users can create lines between notes to show connections
+
+Users can create title notes that have different font
