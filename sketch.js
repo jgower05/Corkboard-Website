@@ -1,4 +1,5 @@
 let notes = [];
+let input;
 class note
 {
 	constructor(x, y)
@@ -11,6 +12,7 @@ class note
 
 function setup()
 {
+	input = createInput();
 	createCanvas(windowWidth, windowHeight);
 }
 
@@ -25,9 +27,12 @@ function draw()
 function drawNote(currentNote)
 {
 	rect(currentNote.x, currentNote.y, 100, 100);
+
+	typeText(currentNote.x, currentNote.y);
+
 	textAlign(CENTER, CENTER);
 	textSize(16);
-	text(currentNote.text, currentNote.x + 50, currentNote.y + 50);
+	text(input.value(), currentNote.x + 50, currentNote.y + 50);
 }
 
 /*
@@ -43,9 +48,9 @@ function doubleClicked(event)
 	notes.push(new note(x- 20, y - 20));
 }
 
-function typeText()
+function typeText(x, y)
 {
-	
+	input.position(x + 50, y + 50);
 }
 
 function windowReized()
